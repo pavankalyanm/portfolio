@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://pavankalyanm.github.io/portfolio",
   "dependencies": {
     "@craco/craco": "^6.0.0",
     "@tailwindcss/postcss7-compat": "^2.0.2",
@@ -9,9 +10,11 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
     "autoprefixer": "^9.8.6",
+    "gh-pages": "^3.2.3",
     "lottie-web": "^5.7.5",
     "postcss": "^7.0.35",
     "react": "^17.0.1",
+    "react-aspect-ratio": "^1.0.50",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
@@ -21,9 +24,15 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "craco build && cp build/index.html build/404.html",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+      
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+  
+  
+
   },
   "eslintConfig": {
     "extends": [

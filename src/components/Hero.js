@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import Lottie from 'lottie-web';
 import animate from 'lottie-web';
-import TypeIt from "typeit-react";
+
+
 
 
 const Hero = () => {
@@ -19,14 +20,25 @@ const Hero = () => {
   }, []);
 
   return (
-    <section >
+    <section style={{marginTop:"50px"}}>
       <div class="row" >
         <div class="column"style={{marginTop:"20%"}}>
          
           <h1 className='text-5xl font-bold md:text-7xl'>Hi There ! <br></br>I’m Pavan</h1>
           <br></br><h3>DEVELOPER | AI & ML ENTHUSIAST</h3>
-         
-        
+          <br></br>
+          <br></br>
+          <br></br>
+          
+          
+          <div className='w-auto flex space-x-5 relative' >
+                  <a href="https://github.com/Deelip7/react-node-ecommerce" target='_blank' rel='noreferrer'>
+                    <img src='./images/icons/github.svg' alt='link to github page' width='24px' height='24px' />
+                  </a>
+                  <a href="https://github.com/Deelip7/react-node-ecommerce" target='_blank' rel='noreferrer'>
+                    <img src='./images/icons/linkedin.svg' alt='link to live website' width='24px' height='24px' />
+                  </a>
+        </div>
           
   </div>
         <div class="column">
@@ -34,11 +46,9 @@ const Hero = () => {
         </div>
         
       </div>
-      <div style={{marinTop:"100px"}}>
-
-     
       
-          </div>
+      
+        
     </section>
   );
 };
