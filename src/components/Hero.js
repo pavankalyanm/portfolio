@@ -24,7 +24,7 @@ const Hero = () => {
       <div class="row" >
         <div class="column"style={{marginTop:"20%"}}>
          
-          <h1 className='text-5xl font-bold md:text-7xl'>Hi There ! <br></br>I’m Pavan Kalyan</h1>
+          <h1 className='text-5xl font-bold md:text-7xl'>Hi There ! <br></br>I’m Pavan</h1>
           <br></br><h3>DEVELOPER | AI & ML ENTHUSIAST</h3>
           <br></br>
           <br></br>
@@ -32,11 +32,11 @@ const Hero = () => {
           
           
           <div className='w-auto flex space-x-5 relative' >
-                  <a href="https://github.com/Deelip7/react-node-ecommerce" target='_blank' rel='noreferrer'>
+                  <a href="https://github.com/pavankalyanm" target='_blank' rel='noreferrer'>
                     <img src='./images/icons/github.svg' alt='link to github page' width='24px' height='24px' />
                   </a>
-                  <a href="https://github.com/Deelip7/react-node-ecommerce" target='_blank' rel='noreferrer'>
-                    <img src='./images/icons/linkedin.svg' alt='link to live website' width='24px' height='24px' />
+                  <a href="https://www.linkedin.com/in/pavan-kalyan-048215164/" target='_blank' rel='noreferrer'>
+                    <img src='./images/icons/linkedin.svg' alt='link to linkedin' width='24px' height='24px' />
                   </a>
         </div>
           
