@@ -9,7 +9,7 @@ const projects = [
   },
   {
     title: 'Smart Attendance using QR code',
-    image: './images/tmdb-mockup',
+    image: './images/saq',
     description: 'A Cross Platform Application that is mainly concerned about saving the time of teachers by taking the attendance using QR code.',
     tools: ['Flutter', 'Firebase', 'Machine Learning'],
     github: 'https://github.com/pavankalyanm/smart_attendance',

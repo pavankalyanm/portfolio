@@ -19,7 +19,7 @@ const Project = () => {
                   sizes='(min-width: 768px) 50vw, 100vw'
                   type='image/webp'
                 />
-                <source srcSet={`${project.image}-768.jpg 768w,`} sizes='(min-width: 768px) 50vw, 100vw' type='image/jpg' />
+                <source srcSet={`./images/saq-768.jpg 768w,`} sizes='(min-width: 768px) 50vw, 100vw' type='image/jpg' />
 
                 <img width='768px' height='575px' loading='lazy' alt={project.title} className='rounded-lg' />
               </picture>
