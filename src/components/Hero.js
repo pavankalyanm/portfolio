@@ -25,7 +25,7 @@ const Hero = () => {
         <div class="column"style={{marginTop:"20%"}}>
          
           <h1 className='text-5xl font-bold md:text-7xl'>Hi There ! <br></br>I’m Pavan Kalyan</h1>
-          <br></br><h3>DEVELOPER | AI & ML ENTHUSIAST</h3>
+          <br></br><h3>PRODUCT MANAGEMENT | SOFTWARE ENGINEERING</h3>
           <br></br>
           <br></br>
           <br></br>
