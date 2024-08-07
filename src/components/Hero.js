@@ -25,7 +25,7 @@ const Hero = () => {
         <div class="column"style={{marginTop:"20%"}}>
          
           <h1 className='text-5xl font-bold md:text-7xl'>Hi There ! <br></br>I’m Pavan Kalyan</h1>
-          <br></br><h3>PRODUCT MANAGEMENT | SOFTWARE ENGINEERING</h3>
+          <br></br><h3>Product Management | Software Engineer | Full Stack Development<break></break> | Project Management | Javascript | Figma | SQL | Python </h3>
           <br></br>
           <br></br>
           <br></br>
@@ -35,7 +35,7 @@ const Hero = () => {
                   <a href="https://github.com/pavankalyanm" target='_blank' rel='noreferrer'>
                     <img src='./images/icons/github.svg' alt='link to github page' width='24px' height='24px' />
                   </a>
-                  <a href="https://www.linkedin.com/in/pavan-kalyan-048215164/" target='_blank' rel='noreferrer'>
+                  <a href="https://www.linkedin.com/in/pavan-kalyan-meesala/" target='_blank' rel='noreferrer'>
                     <img src='./images/icons/linkedin.svg' alt='link to linkedin' width='24px' height='24px' />
                   </a>
         </div>
