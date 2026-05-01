@@ -40,9 +40,9 @@
   --color-line-active: #282828;
   --color-scrollbar: #424242;
   --color-badge: #007acc;
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-geist-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -114,6 +114,21 @@
   background: #555;
 }
 
+/* HR dark mode scrollbar */
+.hr-dark *,
+.hr-dark {
+  scrollbar-color: #2a2a2a transparent;
+}
+.hr-dark *::-webkit-scrollbar-thumb,
+.hr-dark::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+}
+.hr-dark *::-webkit-scrollbar-thumb:hover,
+.hr-dark::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+
 ::selection {
   background: rgba(123, 97, 255, 0.35);
 }
@@ -152,6 +167,146 @@ body {
 
 .animate-slide-in {
   animation: slideIn 0.2s ease-out forwards;
+}
+
+@keyframes marquee-rtl {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee-rtl {
+  animation: marquee-rtl 90s linear infinite;
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent 0, black 6%, black 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 6%, black 94%, transparent 100%);
+}
+
+/* Subtle checkered backdrop — soft 24px grid that reads as texture, not tile */
+.hr-checker {
+  background-color: #f5f5f7;
+  background-image:
+    linear-gradient(45deg, rgba(0, 0, 0, 0.025) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0, 0, 0, 0.025) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.025) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.025) 75%);
+  background-size: 24px 24px;
+  background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+}
+
+/* ──────────────────────────────────────────────────────────
+   HR Mode — Apple-bento polish layer
+   ────────────────────────────────────────────────────────── */
+
+/* Tabular-figure numerals + calt for refined typography */
+.hr-num {
+  font-feature-settings: "tnum" 1, "cv11" 1, "ss01" 1, "calt" 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle grain overlay — barely perceptible paper texture */
+.hr-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  border-radius: inherit;
+}
+
+/* Hairline etched top edge for cards — catches light like brushed aluminum */
+.hr-card {
+  position: relative;
+  isolation: isolate;
+}
+.hr-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Pills — chipset consistency */
+.hr-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #6e6e73;
+  background: #f5f5f7;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-feature-settings: "tnum" 1;
+}
+.hr-chip-live {
+  color: #0e7d4f;
+  background: linear-gradient(180deg, #edfaf1 0%, #e6f7ed 100%);
+  border-color: rgba(14, 125, 79, 0.14);
+}
+.hr-chip-live::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.18);
+}
+
+/* Label — uppercase eyebrow, tracked out */
+.hr-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #86868b;
+  font-feature-settings: "tnum" 1, "ss01" 1;
+}
+
+/* Divider — etched 1px with top highlight */
+.hr-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.06) 20%, rgba(0, 0, 0, 0.06) 80%, transparent);
+}
+
+/* Focus ring — premium, subtle */
+.hr-focus:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px rgba(29, 29, 31, 0.3);
+  border-radius: 8px;
+}
+
+/* Orbit halo — soft radial glow behind memoji */
+.hr-orbit-halo {
+  position: absolute;
+  inset: -12%;
+  pointer-events: none;
+  background: radial-gradient(
+    closest-side,
+    rgba(99, 102, 241, 0.09) 0%,
+    rgba(236, 72, 153, 0.05) 35%,
+    transparent 70%
+  );
+  filter: blur(18px);
+  z-index: 0;
+}
+
+/* Gentle pulse for the live dot */
+@keyframes hr-pulse-soft {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+.hr-pulse-soft {
+  animation: hr-pulse-soft 2.4s ease-in-out infinite;
 }
 
 :root {

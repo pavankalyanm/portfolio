@@ -4,37 +4,37 @@ const skillGroups = [
   {
     category: "Languages",
     color: "text-blue border-blue/25 bg-blue/8",
-    skills: ["Java", "Python", "JavaScript", "TypeScript", "C#", ".NET", "Golang", "C++", "Groovy", "Ruby", "HTML", "SQL", "Bash"],
+    skills: ["JavaScript", "Java", "SQL", "HTML5"],
   },
   {
-    category: "Frameworks & Frontend",
+    category: "Frameworks & Runtimes",
     color: "text-green border-green/25 bg-green/8",
-    skills: ["React", "Angular", "Vue.js", "Next.js", "Tailwind CSS", "a11y"],
+    skills: ["React", "Node.js"],
   },
   {
-    category: "Automation & Testing",
-    color: "text-yellow border-yellow/25 bg-yellow/8",
-    skills: ["Selenium", "REST", "Groovy", "TestNG", "Maven", "Gradle", "CI/CD", "Unit Testing", "Integration Testing", "Regression Testing"],
+    category: "Cloud",
+    color: "text-cyan border-cyan/25 bg-cyan/8",
+    skills: ["AWS", "GCP", "Azure"],
   },
   {
     category: "Gen AI & LLMs",
     color: "text-accent border-accent/25 bg-accent/8",
-    skills: ["GPT", "OpenAI API", "GitHub Copilot", "Gemini", "LLaMA", "Fine-tuning", "RAG Pipelines", "Prompt Engineering"],
+    skills: ["LLM", "Gen AI", "Claude", "Prompt Engineering"],
   },
   {
-    category: "MLOps",
+    category: "Data & Streaming",
     color: "text-pink border-pink/25 bg-pink/8",
-    skills: ["MLflow", "Model Deployment", "Experiment Tracking", "Hugging Face"],
+    skills: ["Apache", "Kafka", "MongoDB"],
   },
   {
-    category: "Cloud & Data",
-    color: "text-cyan border-cyan/25 bg-cyan/8",
-    skills: ["AWS EC2", "AWS S3", "AWS Lambda", "MySQL", "PostgreSQL", "Power BI", "Databricks", "Docker", "Kubernetes", "Terraform"],
+    category: "DevOps & Tools",
+    color: "text-yellow border-yellow/25 bg-yellow/8",
+    skills: ["Docker", "Kubernetes", "GitHub", "Notion"],
   },
   {
     category: "Practices",
     color: "text-orange border-orange/25 bg-orange/8",
-    skills: ["Git", "Agile/Scrum", "SDLC", "Technical Documentation", "Defect Tracking", "Root Cause Analysis"],
+    skills: ["Product Management", "System Design"],
   },
 ];
 

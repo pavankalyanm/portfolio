@@ -75,11 +75,13 @@ const breadcrumbMap: Record<TabId, string[]> = {
 };
 
 const timelineEntries = [
-  { label: "Uniian — Software Engineer", sub: "San Francisco (Remote)", period: "2025–Present", color: "bg-accent", type: "job" },
-  { label: "MS in Information Technology", sub: "UT Dallas", period: "2023–2025", color: "bg-cyan", type: "edu" },
-  { label: "IBM — Software Engineer", sub: "Hyderabad, India", period: "2021–2023", color: "bg-blue", type: "job" },
-  { label: "B.Tech in Computer Science", sub: "JNTU", period: "2018–2021", color: "bg-yellow", type: "edu" },
-  { label: "Diploma in Computer Eng.", sub: "State Board of Technical Education", period: "2015–2018", color: "bg-orange", type: "edu" },
+  { label: "KeyChainN", sub: "Chief Technology Officer", period: "2025–Present", color: "bg-accent", type: "job" },
+  { label: "Evergreen", sub: "Software Engineer Intern", period: "Jan–May 2025", color: "bg-blue", type: "job" },
+  { label: "UT Dallas", sub: "MS in Info Technology and Management", period: "2023–2025", color: "bg-cyan", type: "edu" },
+  { label: "Syniti", sub: "Software Engineer", period: "2022–2023", color: "bg-blue", type: "job" },
+  { label: "Nerds & Geeks", sub: "Software Engineer", period: "2021–2022", color: "bg-blue", type: "job" },
+  { label: "JNTUA College of Engineering", sub: "BTech in Computer Science", period: "2018–2021", color: "bg-yellow", type: "edu" },
+  { label: "S.V Govt Polytechnic", sub: "Diploma in Computer Science", period: "2015–2018", color: "bg-orange", type: "edu" },
 ];
 
 interface DevModeProps {
@@ -147,17 +149,7 @@ export default function DevMode({ onSwitchMode }: DevModeProps) {
             <span className="text-text-muted"> — portfolio</span>
           </span>
         </div>
-        <div className="ml-auto flex items-center gap-1 z-10 mr-3">
-          <button
-            onClick={onSwitchMode}
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded text-[11px] text-text-dim hover:text-text hover:bg-surface-hover transition-colors cursor-pointer"
-            title="Switch to HR Mode"
-          >
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0" />
-            </svg>
-            <span className="hidden sm:inline">HR</span>
-          </button>
+        <div className="ml-auto flex items-center gap-1 z-10 mr-[120px]">
           <a
             href="/resume.pdf"
             download="Pavan_KM_Resume.pdf"

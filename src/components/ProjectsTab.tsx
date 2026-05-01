@@ -15,18 +15,18 @@ interface GitHubRepo {
 
 const hardcodedProjects = [
   {
-    name: "ChessIQ",
+    name: "ApplyFlow AI",
     description:
-      "Gen AI chess coaching platform with fine-tuned GPT + LLaMA. Selenium + Python automation for E2E regression testing. 500+ beta users.",
-    tech: ["Java", "Python", "React", "OpenAI API", "LLaMA", "PostgreSQL", "AWS", "Docker"],
-    link: "https://github.com/pavankalyanm",
+      "AI-powered job-application platform using GPT-4o for resume tailoring, cover letters, and ATS keyword optimization — 70% faster per apply. Multi-agent orchestration on Semantic Kernel + MCP coordinates job scraping, document generation, and tracking across async workflows.",
+    tech: ["GPT-4o", "Semantic Kernel", "MCP", "Multi-Agent", "Python", "Node.js"],
+    link: "https://applyflowai.com",
   },
   {
-    name: "Drone Flight Path Optimizer",
+    name: "ClueClaude",
     description:
-      "ML model with full MLOps lifecycle — MLflow experiment tracking + monitoring. Deployed on AWS infrastructure.",
-    tech: ["Python", "PyTorch", "MLflow", "AWS S3", "PostgreSQL"],
-    link: "https://github.com/pavankalyanm",
+      "Skills-powered interview prep built on Claude. Resume + JD becomes an AI version of you in 60s — per-role Interview Agents auto-generate persona, 12 JD-mapped STAR stories, gap strategies, and 25 predicted questions, all from your actual experience.",
+    tech: ["Claude Opus", "Skills", "MCP", "STAR", "TypeScript", "Next.js"],
+    link: "https://github.com/pavankalyanm/clueclaude",
   },
 ];
 

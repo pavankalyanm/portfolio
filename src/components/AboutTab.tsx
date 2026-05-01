@@ -3,14 +3,21 @@
 import { useState } from "react";
 
 const tags = [
-  "Java",
-  "Python",
-  "React",
   "Gen AI",
-  "MLOps",
+  "Claude",
+  "GPT-4o",
+  "Multi-Agent",
+  "React",
+  "Node.js",
   "AWS",
-  "Selenium",
-  "TypeScript",
+  "MCP",
+];
+
+const funFacts = [
+  "Building @KeyChainN as Co-Founder & CTO. CTO hat by day, code reviews by night.",
+  "Shipped ApplyFlow AI — 70% faster job apps via GPT-4o + Semantic Kernel + MCP.",
+  "Cloned myself into ClueClaude. It interviews better than I do.",
+  "AWS ML · TensorFlow · PyTorch certified. Still Google 'grep -r' every time.",
 ];
 
 export default function AboutTab() {
@@ -65,10 +72,11 @@ export default function AboutTab() {
             Software Engineer
           </h2>
           <p className="text-text-dim leading-relaxed font-sans text-[14px] max-w-xl">
-            Software engineer proficient in Java, Python, JavaScript, C#. Builds
-            automation tools (Selenium, REST, Groovy), frontend apps (React,
-            Angular), and Gen AI features (GPT, LLaMA, prompt engineering, RAG).
-            Familiar with MLOps, AWS, MySQL, Power BI.
+            Software engineer building Gen AI products end-to-end. Currently
+            Co-Founder & CTO @ KeyChainN. Shipped ApplyFlow AI (GPT-4o,
+            Semantic Kernel, MCP) and ClueClaude (Claude Opus + Skills).
+            Comfortable across React, Node.js, Java, multi-agent
+            orchestration, and AWS / GCP / Azure.
           </p>
           <div className="flex flex-wrap gap-2 mt-4">
             {tags.map((tag) => (
@@ -81,6 +89,24 @@ export default function AboutTab() {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Fun facts */}
+      <div className="rounded border border-border bg-surface p-5">
+        <p className="text-comment text-[13px] mb-3">{"// fun.json"}</p>
+        <ul className="space-y-2">
+          {funFacts.map((fact, i) => (
+            <li
+              key={i}
+              className="flex gap-2 text-[13px] text-text-dim font-sans leading-relaxed"
+            >
+              <span className="text-accent mt-0.5 shrink-0 font-mono">
+                {String(i + 1).padStart(2, "0")}.
+              </span>
+              <span>{fact}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Quick actions */}
