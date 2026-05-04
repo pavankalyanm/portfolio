@@ -5,6 +5,18 @@
   grid-auto-rows: minmax(160px, auto);
 }
 
+/* Mobile / tablet ordering — lower order = earlier in the stack */
+@media (max-width: 1023px) {
+  .areaName       { order: 0; }
+  .areaContact    { order: 1; }
+  .areaProjects   { order: 2; } /* Experience timeline */
+  .areaSkills     { order: 3; }
+  .areaRightside  { order: 4; } /* Git Repos + Featured Projects */
+  .areaExperience { order: 5; } /* Latest News */
+  .areaQuote      { order: 6; }
+  .areaFunfact    { order: 7; }
+}
+
 @media (min-width: 640px) {
   .bentoGrid {
     gap: 0.75rem;
@@ -30,4 +42,13 @@
       "funfact  skills    skills     experience";
     height: 92vh;
   }
+
+  .areaName       { grid-area: name; }
+  .areaContact    { grid-area: contact; }
+  .areaQuote      { grid-area: quote; }
+  .areaFunfact    { grid-area: funfact; }
+  .areaRightside  { grid-area: rightside; }
+  .areaExperience { grid-area: experience; }
+  .areaSkills     { grid-area: skills; }
+  .areaProjects   { grid-area: projects; }
 }

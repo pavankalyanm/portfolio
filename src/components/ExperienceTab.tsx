@@ -22,7 +22,7 @@ const jobs: Job[] = [
   {
     company: "KeyChainN",
     role: "Co-Founder & Chief Technology Officer",
-    location: "Austin, Texas",
+    location: "Remote",
     period: "Aug 2025 – Present",
     color: "bg-accent",
     href: "https://keychainn.com",

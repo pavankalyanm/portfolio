@@ -143,8 +143,8 @@ export default function DevMode({ onSwitchMode }: DevModeProps) {
           <span className="w-3 h-3 rounded-full bg-[#febc2e] hover:brightness-90 transition-all" />
           <span className="w-3 h-3 rounded-full bg-[#28c840] hover:brightness-90 transition-all" />
         </div>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <span className="text-[11px] text-text-dim">
+        <div className="absolute inset-0 flex items-center justify-start pl-12 md:justify-center md:pl-0 pointer-events-none">
+          <span className="text-[11px] text-text-dim truncate max-w-[55%] md:max-w-none">
             {tabs.find((t) => t.id === activeTab)?.label}{tabs.find((t) => t.id === activeTab)?.ext}
             <span className="text-text-muted"> — portfolio</span>
           </span>
@@ -159,7 +159,7 @@ export default function DevMode({ onSwitchMode }: DevModeProps) {
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
             </svg>
-            <span className="hidden sm:inline">Resume</span>
+            <span>Resume</span>
           </a>
         </div>
       </div>
@@ -446,6 +446,8 @@ export default function DevMode({ onSwitchMode }: DevModeProps) {
                   {[
                     "Software Engineer",
                     "Full-Stack Developer",
+                    "Product Engineer",
+                    "Product Manager",
                     "Frontend Engineer (React/Next.js)",
                     "Backend Engineer (Java/Python)",
                     "Gen AI / ML Engineer",
@@ -457,16 +459,19 @@ export default function DevMode({ onSwitchMode }: DevModeProps) {
                     </div>
                   ))}
                   <div className="border-t border-border mt-1 pt-1">
-                    <a
-                      href="mailto:kalyanmese@gmail.com?subject=Job%20Opportunity%20—%20Software%20Engineer&body=Hi%20Pavan%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20role%20with%20you.%0A%0ABest%20regards"
-                      className="flex items-center gap-2 px-3 py-1.5 text-accent hover:bg-surface-hover transition-colors no-underline"
-                      onClick={() => setRolesOpen(false)}
+                    <button
+                      type="button"
+                      className="flex items-center gap-2 px-3 py-1.5 text-accent hover:bg-surface-hover transition-colors w-full text-left cursor-pointer"
+                      onClick={() => {
+                        openTab("contact");
+                        setRolesOpen(false);
+                      }}
                     >
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                       </svg>
                       Reach out to me
-                    </a>
+                    </button>
                   </div>
                 </div>
               </>

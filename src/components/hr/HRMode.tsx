@@ -40,12 +40,6 @@ const IconWrapper = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-const GitHubGlyph = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="h-full w-full" aria-hidden>
-    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-  </svg>
-);
-
 const LinkedInGlyph = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="h-full w-full" aria-hidden>
     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -55,6 +49,12 @@ const LinkedInGlyph = () => (
 const InstagramGlyph = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="h-full w-full" aria-hidden>
     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+  </svg>
+);
+
+const DiscordGlyph = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="h-full w-full" aria-hidden>
+    <path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.74 19.74 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.892.077.077 0 0 0-.04.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.42 0-1.333.956-2.418 2.157-2.418 1.21 0 2.176 1.094 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.42 0-1.333.955-2.418 2.157-2.418 1.21 0 2.176 1.094 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
   </svg>
 );
 
@@ -116,6 +116,8 @@ const contactIcons: IconGridItem[] = [
   {
     id: "email",
     name: "Email",
+    href: "mailto:kalyanmese@gmail.com",
+    copyValue: "kalyanmese@gmail.com",
     icon: (
       <IconWrapper>
         <Mail className="h-full w-full" />
@@ -123,17 +125,21 @@ const contactIcons: IconGridItem[] = [
     ),
   },
   {
-    id: "github",
-    name: "GitHub",
+    id: "discord",
+    name: "Discord",
+    href: "https://discord.com/users/pavankalyanm",
+    copyValue: "pavankalyanm",
     icon: (
       <IconWrapper>
-        <GitHubGlyph />
+        <DiscordGlyph />
       </IconWrapper>
     ),
   },
   {
     id: "linkedin",
     name: "LinkedIn",
+    href: "https://www.linkedin.com/in/pavankalyan-meesala/",
+    copyValue: "https://www.linkedin.com/in/pavankalyan-meesala/",
     icon: (
       <IconWrapper>
         <LinkedInGlyph />
@@ -143,6 +149,8 @@ const contactIcons: IconGridItem[] = [
   {
     id: "instagram",
     name: "Instagram",
+    href: "https://instagram.com/pavankalyan.me",
+    copyValue: "@pavankalyan.me",
     icon: (
       <IconWrapper>
         <InstagramGlyph />
@@ -362,8 +370,8 @@ export default function HRMode({ onSwitchMode }: HRModeProps) {
         {/* ─── Name / Identity ─── */}
         <motion.div
           variants={item}
-          style={{ ...cardShadow, gridArea: "name" }}
-          className={`${cardBase} p-6 flex flex-col justify-between min-h-[300px]`}
+          style={cardShadow}
+          className={`${styles.areaName} ${cardBase} p-6 flex flex-col justify-between min-h-[300px]`}
           whileHover={cardHover}
         >
           {/* Dotted background */}
@@ -431,8 +439,8 @@ export default function HRMode({ onSwitchMode }: HRModeProps) {
         {/* ─── Contact ─── */}
         <motion.div
           variants={item}
-          style={{ ...cardShadow, gridArea: "contact" }}
-          className={`${cardBase} min-h-[240px] flex flex-col`}
+          style={cardShadow}
+          className={`${styles.areaContact} ${cardBase} min-h-[240px] flex flex-col`}
           whileHover={cardHover}
         >
           <div className="flex items-center justify-between">
@@ -450,8 +458,8 @@ export default function HRMode({ onSwitchMode }: HRModeProps) {
         {/* ─── Fav Quote (thin horizontal strip) ─── */}
         <motion.div
           variants={item}
-          style={{ ...cardShadow, gridArea: "quote" }}
-          className={`${cardBase} flex flex-col sm:flex-row sm:items-center py-4 gap-2 sm:gap-0`}
+          style={cardShadow}
+          className={`${styles.areaQuote} ${cardBase} flex flex-col sm:flex-row sm:items-center py-4 gap-2 sm:gap-0`}
           whileHover={cardHover}
         >
           <div className="flex items-center">
@@ -471,8 +479,8 @@ export default function HRMode({ onSwitchMode }: HRModeProps) {
         {/* ─── Fun Fact Carousel (small) ─── */}
         <motion.div
           variants={item}
-          style={{ ...cardShadow, gridArea: "funfact" }}
-          className={`${cardBase} min-h-[140px] flex flex-col`}
+          style={cardShadow}
+          className={`${styles.areaFunfact} ${cardBase} min-h-[140px] flex flex-col`}
           whileHover={cardHover}
         >
           <div className="flex items-center justify-between">
@@ -511,10 +519,8 @@ export default function HRMode({ onSwitchMode }: HRModeProps) {
         </motion.div>
 
         {/* ─── Right side stack: Git Repos top + Featured Projects below (col 3) ─── */}
-        <div
-          style={{ gridArea: "rightside" }}
-          className="flex flex-col gap-2.5 min-h-0"
-        >
+        <div className={`${styles.areaRightside} flex flex-col gap-2.5 min-h-0`}>
+
           {/* Git Repos */}
           <motion.div
             variants={item}
@@ -524,13 +530,27 @@ export default function HRMode({ onSwitchMode }: HRModeProps) {
           >
             <div className="flex items-center justify-between">
               <Label>Git Repos</Label>
-              <span className="flex items-center gap-1.5 text-[9.5px] font-medium tracking-[0.08em] uppercase text-[#0e7d4f]">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute h-full w-full rounded-full bg-green-500 opacity-60" />
-                  <span className="relative rounded-full h-1.5 w-1.5 bg-green-500" />
+              <div className="flex items-center gap-2">
+                <a
+                  href="https://github.com/pavankalyanm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hr-focus inline-flex items-center gap-1 text-[9.5px] font-medium tracking-[0.04em] text-[#1d1d1f] hover:text-[#0e639c] transition-colors"
+                  title="github.com/pavankalyanm"
+                >
+                  <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.74 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.27-5.24-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.16 1.17.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.48 3.16-1.17 3.16-1.17.62 1.58.23 2.74.11 3.03.74.8 1.18 1.82 1.18 3.07 0 4.39-2.69 5.36-5.25 5.64.41.36.78 1.06.78 2.13 0 1.54-.01 2.78-.01 3.16 0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.73 18.27.5 12 .5z" />
+                  </svg>
+                  pavankalyanm
+                </a>
+                <span className="flex items-center gap-1.5 text-[9.5px] font-medium tracking-[0.08em] uppercase text-[#0e7d4f]">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="animate-ping absolute h-full w-full rounded-full bg-green-500 opacity-60" />
+                    <span className="relative rounded-full h-1.5 w-1.5 bg-green-500" />
+                  </span>
+                  {reposLoading ? "Syncing" : "Shipping"}
                 </span>
-                {reposLoading ? "Syncing" : "Live"}
-              </span>
+              </div>
             </div>
             <div className="mt-4">
               <div className="grid grid-cols-2 gap-2">
@@ -538,8 +558,6 @@ export default function HRMode({ onSwitchMode }: HRModeProps) {
                   const color = repo.language
                     ? langColors[repo.language] ?? "#86868b"
                     : "#86868b";
-                  const description =
-                    repo.description?.trim() || "No description provided.";
                   const content = (
                     <div className="rounded-[10px] border border-[#ececef] bg-[#fafafa]/70 p-2.5 transition-all duration-300 hover:bg-white hover:border-[#d2d2d7] hover:shadow-[0_1px_2px_rgba(16,24,40,0.04),0_4px_12px_rgba(16,24,40,0.04)] hover:-translate-y-px">
                       <div className="flex items-center gap-2 min-w-0">
@@ -553,12 +571,9 @@ export default function HRMode({ onSwitchMode }: HRModeProps) {
                         <p className="text-[12.5px] font-semibold text-[#1d1d1f] truncate tracking-[-0.005em]">
                           {repo.name}
                         </p>
-                        <span className="text-[9.5px] text-[#86868b] ml-auto shrink-0 font-medium tracking-[0.02em]">
-                          {repo.language ?? "—"}
-                        </span>
                       </div>
-                      <p className="mt-1 text-[11px] text-[#86868b] leading-[1.45] line-clamp-2">
-                        {description}
+                      <p className="mt-0.5 ml-[14px] text-[10px] text-[#86868b] font-medium tracking-[0.02em]">
+                        {repo.language ?? "—"}
                       </p>
                     </div>
                   );
@@ -605,8 +620,8 @@ export default function HRMode({ onSwitchMode }: HRModeProps) {
         {/* ─── Latest News — col 4 full height ─── */}
         <motion.div
           variants={item}
-          style={{ ...cardShadow, gridArea: "experience" }}
-          className={`${cardBase} flex flex-col overflow-y-auto`}
+          style={cardShadow}
+          className={`${styles.areaExperience} ${cardBase} flex flex-col overflow-y-auto`}
           whileHover={cardHover}
         >
           <div className="flex items-center justify-between">
@@ -617,38 +632,69 @@ export default function HRMode({ onSwitchMode }: HRModeProps) {
             {[
               {
                 date: "Latest · LinkedIn",
-                title: "Building KeyChainN",
-                body: "Co-founder + CTO. Heads-down shipping the stack — follow along on LinkedIn.",
+                title: "Job searching in 2026 is completely broken",
+                body: "Why the funnel is busted, what AI agents change, and how I'd fix it.",
+                href: "https://www.linkedin.com/posts/pavankalyan-meesala_job-searching-in-2026-is-completely-broken-share-7443399829965340672-3_7c",
               },
               {
                 date: "Recent · LinkedIn",
-                title: "ApplyFlow AI — shipped",
-                body: "GPT-4o job-app automation with Semantic Kernel + MCP. 70% faster applies.",
+                title: "KeyChainN is ready, so am I",
+                body: "Launching KeyChainN as Co-Founder & CTO — the build is live.",
+                href: "https://www.linkedin.com/posts/pavankalyan-meesala_keychainn-is-ready-so-am-i-share-7435439643401060352-I5qw",
+              },
+              {
+                date: "Recent · Substack",
+                title: "JustApplied — note",
+                body: "Notes from the trenches of building, applying, and shipping in public.",
+                href: "https://substack.com/@justapplied/note/p-193207619",
+              },
+              {
+                date: "Earlier · LinkedIn",
+                title: "Founder journey — Startup Grind",
+                body: "On startup mania, Startup Grind, and the long arc of founder life.",
+                href: "https://www.linkedin.com/posts/pavankalyan-meesala_startupmania-startupgrind-founderjourney-share-7425327573901127680-piWK",
               },
             ].map((news, i, arr) => (
-              <div
+              <a
                 key={news.title}
-                className={`group ${i < arr.length - 1 ? "pb-4 border-b border-[#f0f0f2]" : ""}`}
+                href={news.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`hr-focus block group ${i < arr.length - 1 ? "pb-4 border-b border-[#f0f0f2]" : ""}`}
               >
                 <p className="text-[9.5px] uppercase tracking-[0.16em] text-[#a1a1a6] font-semibold hr-num">
                   {news.date}
                 </p>
-                <p className="text-[13px] font-semibold text-[#1d1d1f] mt-1.5 leading-[1.25] tracking-[-0.01em]">
+                <p className="text-[13px] font-semibold text-[#1d1d1f] mt-1.5 leading-[1.25] tracking-[-0.01em] group-hover:text-[#0e639c] transition-colors">
                   {news.title}
                 </p>
                 <p className="text-[11.5px] text-[#6e6e73] mt-1 leading-[1.5]">
                   {news.body}
                 </p>
-              </div>
+              </a>
             ))}
+          </div>
+          <div className="mt-auto -mx-6 -mb-6 pt-5">
+            <iframe
+              title="Spotify playlist"
+              data-testid="embed-iframe"
+              src="https://open.spotify.com/embed/playlist/3RMOIziTyLVtyl0o8KkCsf?utm_source=generator&theme=0"
+              width="100%"
+              height="152"
+              frameBorder={0}
+              allowFullScreen
+              loading="lazy"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              style={{ display: "block", borderBottomLeftRadius: 22, borderBottomRightRadius: 22 }}
+            />
           </div>
         </motion.div>
 
         {/* ─── Skills (wide) ─── */}
         <motion.div
           variants={item}
-          style={{ ...cardShadow, gridArea: "skills" }}
-          className={`${cardBase} p-0 relative overflow-hidden min-h-[180px] lg:min-h-0`}
+          style={cardShadow}
+          className={`${styles.areaSkills} ${cardBase} p-0 relative overflow-hidden min-h-[180px] lg:min-h-0`}
           whileHover={cardHover}
         >
           <div className="absolute top-3 left-4 z-20 flex items-center gap-2 rounded-full bg-white/75 backdrop-blur-md px-2.5 py-1 border border-black/[0.04] shadow-[0_1px_2px_rgba(16,24,40,0.04)]">
@@ -666,8 +712,8 @@ export default function HRMode({ onSwitchMode }: HRModeProps) {
         {/* ─── Experience (timeline, mirrors dev) ─── */}
         <motion.div
           variants={item}
-          style={{ ...cardShadow, gridArea: "projects" }}
-          className={`${cardBase} flex flex-col overflow-hidden`}
+          style={cardShadow}
+          className={`${styles.areaProjects} ${cardBase} flex flex-col overflow-hidden`}
           whileHover={cardHover}
         >
           <div className="flex items-center justify-between mb-4">

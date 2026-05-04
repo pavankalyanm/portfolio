@@ -13,6 +13,7 @@ const commands: Record<string, string> = {
   experience  - Work experience
   projects    - Featured projects
   github      - GitHub link
+  spotify     - On Repeat playlist
   email       - Copy email to clipboard
   resume      - Download resume
   clear       - Clear terminal
@@ -29,9 +30,12 @@ MLOps:       MLflow, Model Deployment, Hugging Face
 Cloud:       AWS (EC2, S3, Lambda), Docker, Kubernetes, Terraform
 Data:        MySQL, PostgreSQL, Power BI, Databricks`,
   contact: `{
-  "email": "kalyanmese@gmail.com",
-  "phone": "(737) 429-1092",
-  "github": "github.com/pavankalyanm"
+  "email":     "kalyanmese@gmail.com",
+  "phone":     "+1 (945) 527-6194",
+  "discord":   "pavankalyanm",
+  "linkedin":  "in/pavankalyan-meesala",
+  "instagram": "@pavankalyan.me",
+  "github":    "github.com/pavankalyanm"
 }`,
   education: `MS in Information Technology — UT Dallas (2023–2025)
 B.Tech in Computer Science — JNTU (2018–2021)
@@ -44,6 +48,8 @@ Diploma in Computer Engineering — (2015–2018)`,
   projects: `► ChessIQ — Gen AI chess coaching platform (GPT + LLaMA, 500+ users)
 ► Drone Flight Path Optimizer — ML model with MLOps lifecycle`,
   github: "→ https://github.com/pavankalyanm",
+  spotify: `♪ On Repeat — pavan's playlist
+→ https://open.spotify.com/playlist/3RMOIziTyLVtyl0o8KkCsf`,
   date: new Date().toLocaleDateString("en-US", {
     weekday: "long",
     year: "numeric",
@@ -171,8 +177,12 @@ export default function Terminal({ onClose }: TerminalProps) {
 
   return (
     <div
-      className="h-full flex flex-col bg-[#1b1b1b] cursor-text font-mono text-[13px]"
-      onClick={() => inputRef.current?.focus()}
+      className="h-full flex flex-col bg-[#1b1b1b] cursor-text font-mono text-[13px] select-text"
+      onClick={(e) => {
+        const sel = window.getSelection?.();
+        if (sel && sel.toString().length > 0) return;
+        inputRef.current?.focus();
+      }}
     >
       {/* Terminal tab bar */}
       <div className="flex items-center justify-between px-3 py-0 bg-[#252526] border-b border-border shrink-0 h-[30px]">
@@ -195,37 +205,57 @@ export default function Terminal({ onClose }: TerminalProps) {
           </button>
         </div>
       </div>
-      {/* Terminal content */}
-      <div
-        ref={terminalRef}
-        className="flex-1 p-3 overflow-y-auto space-y-0.5"
-      >
-        {lines.map((line, i) =>
-          line.type === "input" ? (
-            <p key={i}>
-              <Prompt />
-              <span className="text-text">{line.text}</span>
-            </p>
-          ) : (
-            <pre key={i} className="text-text-dim whitespace-pre-wrap mb-0.5">
-              {line.text}
-            </pre>
-          )
-        )}
-        <div className="flex items-center">
-          <Prompt />
-          <input
-            ref={inputRef}
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            className="flex-1 bg-transparent text-text outline-none border-none caret-text font-mono text-[13px] p-0 m-0"
-            spellCheck={false}
-            autoComplete="off"
-            aria-label="Terminal input"
-          />
+      {/* Terminal content + Spotify side panel */}
+      <div className="flex-1 flex min-h-0">
+        <div
+          ref={terminalRef}
+          className="flex-1 p-3 overflow-y-auto space-y-0.5 min-w-0"
+        >
+          {lines.map((line, i) =>
+            line.type === "input" ? (
+              <p key={i}>
+                <Prompt />
+                <span className="text-text">{line.text}</span>
+              </p>
+            ) : (
+              <pre key={i} className="text-text-dim whitespace-pre-wrap mb-0.5">
+                {line.text}
+              </pre>
+            )
+          )}
+          <div className="flex items-center">
+            <Prompt />
+            <input
+              ref={inputRef}
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              className="flex-1 bg-transparent text-text outline-none border-none caret-text font-mono text-[13px] p-0 m-0"
+              spellCheck={false}
+              autoComplete="off"
+              aria-label="Terminal input"
+            />
+          </div>
         </div>
+        {/* Spotify mini-player — pinned right, hidden on mobile */}
+        <aside
+          className="hidden md:flex shrink-0 w-[300px] border-l border-border bg-[#181818] p-2.5 items-center justify-center"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <iframe
+            title="Spotify playlist"
+            data-testid="embed-iframe"
+            src="https://open.spotify.com/embed/playlist/3RMOIziTyLVtyl0o8KkCsf?utm_source=generator&theme=0"
+            width="100%"
+            height="152"
+            frameBorder={0}
+            allowFullScreen
+            loading="lazy"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            style={{ borderRadius: 12, display: "block" }}
+          />
+        </aside>
       </div>
     </div>
   );
